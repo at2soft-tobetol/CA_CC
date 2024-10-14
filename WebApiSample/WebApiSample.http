@@ -1,0 +1,43 @@
+@WebApiSample_HostAddress = http://localhost:5181
+
+GET {{WebApiSample_HostAddress}}/api/Project
+Accept: application/json
+
+###
+
+GET {{WebApiSample_HostAddress}}/api/Project/11
+Accept: application/json
+
+###
+
+POST {{WebApiSample_HostAddress}}/api/Project
+Content-Type: application/json
+Accept: application/json
+
+{
+  "projectId": 0,
+  "name": "Proyecto de Prueba de Insert",
+  "decription": "Este es un proyecto de prueba de insert",
+  "createDate": "2024-10-14T22:40:52.614Z",
+  "status": 0,
+  "startDate": "2024-10-14T22:40:52.614Z",
+  "endDate": "2024-10-14T22:40:52.614Z"
+}
+
+###
+
+PUT {{WebApiSample_HostAddress}}/api/Project/Start?projectid=1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+PUT {{WebApiSample_HostAddress}}/api/Project/Pause?projectid=1
+Content-Type: application/json
+Accept: application/json
+
+###
+
+PUT {{WebApiSample_HostAddress}}/api/Project/End?projectid=1
+Content-Type: application/json
+Accept: application/json
